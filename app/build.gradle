@@ -1,0 +1,110 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+
+}
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+apply plugin: 'kotlin-kapt'
+android {
+    namespace 'kr.koizi.koiziapp'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "kr.koizi.koiziapp"
+        minSdk 23
+        targetSdk 33
+        versionCode 5
+        versionName "1.4"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "HEADER_TOKKEN_KEY", properties['header_tokken_key']
+        buildConfigField "String", "KAKAO_NATIVE_APP_KEY", properties['kakao_native_app_key']
+        resValue "string", "kakao_oauth_host", properties['kakao_oauth_host']
+        buildConfigField "String", "KAKAO_LOGIN_PASSWORD", properties['kakao_login_password']
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.annotation:annotation:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.databinding:databinding-common:8.1.0'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //Circle ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    kapt 'com.github.bumptech.glide:compiler:4.14.2'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    //auto login
+    implementation "androidx.security:security-crypto:1.1.0-alpha06"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+    // Gson
+    implementation "com.google.code.gson:gson:2.10.1"
+
+    // OkHttp
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+
+    // FireBase
+    implementation platform('com.google.firebase:firebase-bom:31.5.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.2.1'
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    configurations.all {
+        exclude group: 'com.google.android.gms', module: 'play-services-safetynet'
+    }
+    // Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    // kakao
+    implementation "com.kakao.sdk:v2-all:2.15.0" // 전체 모듈 설치, 2.11.0 버전부터 지원
+    implementation "com.kakao.sdk:v2-user:2.15.0" // 카카오 로그인
+    implementation "com.kakao.sdk:v2-talk:2.15.0" // 친구, 메시지(카카오톡)
+    implementation "com.kakao.sdk:v2-story:2.15.0" // 카카오스토리
+    implementation "com.kakao.sdk:v2-share:2.15.0" // 메시지(카카오톡 공유)
+    implementation "com.kakao.sdk:v2-navi:2.15.0" // 카카오내비
+    implementation "com.kakao.sdk:v2-friend:2.15.0" // 카카오톡 소셜 피커, 리소스 번들 파일 포함
+}

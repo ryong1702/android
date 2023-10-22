@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="kr.koizi.koiziapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:name=".GlobalApplication"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="33">
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao${NATIVE_APP_KEY}://oauth" -->
+                <data android:host="oauth"
+                    android:scheme="@string/kakao_oauth_host" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".interior.history.ConsultingHistoryDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interior.AgreementCollectionPersonalInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".test.history.TestHistoryDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interior.history.ProgressHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".test.TestQ5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".test.TestAnswerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".test.TestQ4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".test.TestQ3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".test.TestQ2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".test.history.TestHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interior.history.ConsultingHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".test.TestQ1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".interior.SelectGenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".join.MarketingInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myPage.NoticeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".alarm.AlarmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interior.ProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interior.SampleTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interior.AskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myPage.AppSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myPage.NoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myPage.InfoTermsOfServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myPage.PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myPage.InfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".myPage.MyPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".join.RegisterProfileActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".join.RegisterPasswordActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".join.RegisterIdActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".join.IdentityVerificationCodeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".join.IdentityVerificationActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".join.TermsOfUseActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".login.PasswordResetActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".login.FoundIdActivity"
+            android:exported="false"
+            android:parentActivityName=".login.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".login.FindPassWordActivity"
+            android:exported="false"
+            android:parentActivityName=".login.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".login.VerificationCodeActivity"
+            android:exported="false"
+            android:parentActivityName=".login.FindIdActivity" />
+
+        <activity
+            android:name=".login.FindIdActivity"
+            android:exported="false"
+            android:parentActivityName=".login.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- FCM 서비스 등록 -->
+        <service
+            android:name=".utils.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+    </application>
+    <queries>
+        <package android:name="com.android.phone" />
+    </queries>
+</manifest>

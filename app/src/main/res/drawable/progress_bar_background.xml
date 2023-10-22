@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 배경 색상 -->
+    <item>
+        <shape>
+            <solid android:color="#EEEEEE" />
+            <!-- 둥근 모서리 -->
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <!-- 전경 색상 -->
+    <item>
+        <!-- 크기 조절 -->
+        <scale
+            android:drawable="@drawable/progress_bar_foreground"
+            android:scaleWidth="100%" />
+    </item>
+</layer-list>

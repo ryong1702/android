@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#111111</color>
+    <color name="secondary">#505050</color>
+    <color name="tertiary">#767676</color>
+    <color name="disabled">#999999</color>
+    <color name="inversePrimary">#FFFFFFFF</color>
+    <color name="light_bg">#F7F7FB</color>
+    <color name="deep_bg">#F1F1F5</color>
+    <color name="line_light">#F0F0F6</color>
+    <color name="line_default">#E5E5EC</color>
+    <color name="error">#FB4E4E</color>
+    <color name="warning">#F6A609</color>
+    <color name="success">#2AC769</color>
+    <color name="completed">#2962FF</color>
+    <color name="main_color">#FFEB3B</color>
+    <color name="light_yellow">#FFFDE7</color>
+    <color name="green">#49C847</color>
+    <color name="orange">#F67B09</color>
+    <color name="progress75">#EAC769</color>
+    <color name="alarm_date">#626262</color>
+    <color name="alarm_title">#2C3131</color>
+    <color name="text_gray">#A9A9A9</color>
+    <color name="click_gray">#F0F0F6</color>
+</resources>

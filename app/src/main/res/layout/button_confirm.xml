@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:enabled="false"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/confirm"
+        android:textStyle="bold"
+        android:background="@drawable/button_background"
+        android:textColor="@drawable/button_text"
+        android:textSize="18sp"/>
+</LinearLayout>

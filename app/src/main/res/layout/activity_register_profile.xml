@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".join.RegisterProfileActivity">
+
+    <include layout="@layout/toolbar_back_title" android:id="@+id/toolbar_register_profile" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="@string/text_register_profile" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+                <RelativeLayout
+                    android:id="@+id/button_profile_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    tools:ignore="UselessParent">
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile"
+                        android:contentDescription="@string/profile" />
+
+                    <ImageView
+                        android:id="@+id/btn_upload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profile_image"
+                        android:layout_marginTop="-24dp"
+                        android:layout_marginStart="54dp"
+                        android:clickable="true"
+                        android:src="@drawable/profile_upload2"
+                        android:focusable="true"
+                        android:contentDescription="@string/profile" />
+                </RelativeLayout>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/et_nick_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_rounded_corner_rectangle"
+                android:ems="10"
+                android:hint="@string/text_nick_name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:autofillHints="@string/text_nick_name" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include layout="@layout/button_next" android:id="@+id/button_next"  />
+</LinearLayout>

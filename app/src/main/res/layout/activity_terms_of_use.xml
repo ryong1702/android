@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".join.TermsOfUseActivity">
+
+    <include layout="@layout/toolbar_back_title" android:id="@+id/toolbar_terms_of_use" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/text_koizi_service_agree" />
+
+        <CheckBox
+            android:id="@+id/chk_master"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/check_all_agree"
+            android:checked="false"
+            android:buttonTint="@color/main_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/line_default" />
+        <CheckBox
+            android:id="@+id/chk_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/check_required_years"
+            android:textSize="14sp"
+            android:buttonTint="@color/main_color"
+            android:checked="false" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/chk_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/check_required_service"
+                android:textSize="14sp"
+                android:buttonTint="@color/main_color" />
+
+            <TextView
+                android:id="@+id/tv_show_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/disabled"
+                android:text="@string/show" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/chk_personal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/check_required_privacy"
+                android:textSize="14sp"
+                android:buttonTint="@color/main_color" />
+
+            <TextView
+                android:id="@+id/tv_show_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/disabled"
+                android:text="@string/show" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/chk_marketing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:textSize="14sp"
+                android:text="@string/check_optional_marketing"
+                android:buttonTint="@color/main_color"/>
+
+            <TextView
+                android:id="@+id/tv_show_marketing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/disabled"
+                android:text="@string/show"/>
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/button_next" android:id="@+id/button_next"  />
+</LinearLayout>

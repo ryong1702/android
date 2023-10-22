@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@android:drawable/checkbox_on_background"/>
+<!--        <shape android:shape="oval">-->
+<!--            <stroke android:color="@color/disabled" android:width="1dp" />-->
+<!--            <solid android:color="@color/main_color" />-->
+<!--            <size android:width="5dp" android:height="5dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+    <item android:state_checked="false">
+        <shape android:shape="oval">
+            <stroke android:color="@color/disabled" android:width="0.1dp" />
+            <size android:width="15dp" android:height="15dp" />
+        </shape>
+    </item>
+</selector>

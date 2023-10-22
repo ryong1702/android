@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".test.TestQ1Activity">
+
+    <include layout="@layout/toolbar_back" android:id="@+id/toolbar_select_test" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar_select_test"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:indeterminateDrawable="@drawable/progress_bar_background"
+            android:max="100"
+            android:progress="20"
+            android:progressDrawable="@drawable/progress_bar_background" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/q1"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/main_color"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_Q1"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:baselineAligned="false">
+                    <LinearLayout
+                        android:id="@+id/select_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:id="@+id/iv_select_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/q1_1_0"
+                            android:contentDescription="@string/Q1_text_1" />
+
+                        <TextView
+                            android:id="@+id/tv_select_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/Q1_text_1"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/select_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:id="@+id/iv_select_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/q1_2_0"
+                            android:contentDescription="@string/Q1_text_2" />
+                        <TextView
+                            android:id="@+id/tv_select_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Q1_text_2"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            android:layout_marginTop="5dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:baselineAligned="false">
+                    <LinearLayout
+                        android:id="@+id/select_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:id="@+id/iv_select_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center"
+                            android:src="@drawable/q1_3_0"
+                            android:contentDescription="@string/Q1_text_3" />
+                        <TextView
+                            android:id="@+id/tv_select_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Q1_text_3"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/select_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:id="@+id/iv_select_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center"
+                            android:src="@drawable/q1_4_0"
+                            android:contentDescription="@string/Q1_text_4" />
+
+                        <TextView
+                            android:id="@+id/tv_select_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Q1_text_4"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <include layout="@layout/button_next2" android:id="@+id/button_next"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</RelativeLayout>

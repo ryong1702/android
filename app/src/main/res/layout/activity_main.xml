@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".main.MainActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/left_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/inversePrimary"
+                android:src="@drawable/koizi_logo"
+                android:contentDescription="@string/koizi" />
+
+            <LinearLayout
+                android:id="@+id/right_buttons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:src="@drawable/menu_alarm_off"
+                    android:contentDescription="@string/alarm" />
+
+                <ImageView
+                    android:id="@+id/btn_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:src="@drawable/menu_profile"
+                    android:contentDescription="@string/profile" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="20dp"
+                    android:background="@color/light_yellow"
+                    android:orientation="horizontal">
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_view_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_gravity="center"
+                                android:background="@color/disabled" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="100dp"
+                                    android:minHeight="20dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@color/disabled" />
+
+                                <View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="200dp"
+                                    android:minHeight="20dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@color/disabled" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+                    <LinearLayout
+                        android:id="@+id/layout_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_corner_white"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/main_estimate_home"
+                            android:contentDescription="@string/image" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tv_message_progress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"/>
+                            <TextView
+                                android:id="@+id/tv_message"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/cv_interior_ask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_yellow">
+
+                    <ImageView
+                        android:id="@+id/iv_ask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/main_ask"
+                        android:contentDescription="@string/image" />
+
+                    <TextView
+                        android:id="@+id/tv_ask_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ask_title"
+                        android:textSize="13sp"
+                        android:layout_marginStart="15dp"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/tv_ask_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/text_ask"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:layout_below="@id/tv_ask_title"
+                        android:layout_marginStart="15dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true">
+                        <TextView
+                            android:id="@+id/btn_ask_interior"
+                            android:layout_width="164dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="20dp"
+                            android:gravity="center"
+                            android:background="@drawable/button_background"
+                            android:text="@string/ask_interior" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_sample_test"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/green"
+                app:cardElevation="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="10dp"
+                android:src="@drawable/main_sliding"
+                android:contentDescription="@string/image" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/btn_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:padding="8dp"
+                    android:background="@drawable/button_background"
+                    android:text="@string/text_main_title_test" />
+
+                <TextView
+                    android:id="@+id/tv_test_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_main_test"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    tools:ignore="RelativeOverlap" />
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:background="@color/line_light" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/text_main_tip"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/main_thumbs_up"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="@string/image" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/btn_community"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:padding="7dp"
+                        android:background="@drawable/ask_button"
+                        android:gravity="center"
+                        android:text="@string/btn_community"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <include layout="@layout/skeleton_view" android:id="@+id/toolbar_skeleton" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/recycler_main_images"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".login.LoginActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="9"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_id"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edittext_rounded_corner_rectangle"
+                        android:hint="@string/text_id_input"
+                        android:textColorHint="@color/disabled"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:maxLength="255"
+                        android:textSize="15sp"
+                        android:autofillHints="" />
+
+                    <TextView
+                        android:id="@+id/tv_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/text_password"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edittext_rounded_corner_rectangle"
+                        android:hint="@string/text_please_input_password"
+                        android:inputType="textPassword"
+                        android:padding="10dp"
+                        android:maxLength="255"
+                        android:textColorHint="@color/disabled"
+                        android:textSize="15sp"
+                        android:autofillHints="" />
+
+                    <CheckBox
+                        android:id="@+id/cb_save_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/text_id_save"
+                        android:buttonTint="@color/main_color"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/tv_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="@string/text_login"
+                        android:gravity="center"
+                        android:background="@drawable/button_background"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:id="@+id/tv_find_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:textColor="@color/tertiary"
+                            android:text="@string/text_find_id"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:textColor="@color/tertiary"
+                            android:text="@string/text_stick" />
+
+                        <TextView
+                            android:id="@+id/tv_find_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:textColor="@color/tertiary"
+                            android:text="@string/text_find_password" />
+
+                        <TextView
+                            android:id="@+id/tv_signup"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.7"
+                            android:gravity="end"
+                            android:textColor="@color/secondary"
+                            android:text="@string/text_sign_in" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_sns_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_sns_login"
+                        android:gravity="center"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="50dp" />
+
+                        <ImageView
+                            android:id="@+id/kakao_login"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/kakao_login_medium_narrow"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

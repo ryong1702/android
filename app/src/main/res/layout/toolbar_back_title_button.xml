@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/inversePrimary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/inversePrimary"
+        android:src="@drawable/back_button"
+        android:contentDescription="@string/back"
+        android:layout_gravity="start" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_gravity="center" />
+
+    <ImageButton
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:background="@color/inversePrimary"
+        android:src="@drawable/button_save"
+        android:layout_gravity="end" />
+</com.google.android.material.appbar.MaterialToolbar>
